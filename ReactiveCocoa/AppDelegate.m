@@ -36,9 +36,15 @@
 //        return @(pow([value integerValue], 2));
 //    }] array]);
     
-    NSLog(@"%@", [[[array rac_sequence] filter:^BOOL(id value) {
-        return [value integerValue] % 2 == 0;
-    }] array]);
+//    NSLog(@"%@", [[[array rac_sequence] filter:^BOOL(id value) {
+//        return [value integerValue] % 2 == 0;
+//    }] array]);
+    
+    NSLog(@"%@", [[[array rac_sequence] map:^id(id value) {
+        return [value stringValue];
+    }] foldLeftWithStart:@"" reduce:^id(id accumulator, id value) {
+        return [accumulator stringByAppendingString:value];
+    }]);
     
     return YES;
 }
