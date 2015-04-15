@@ -31,9 +31,13 @@
     
     // rac_sequence
     NSArray *array = @[@1, @2, @3];
-    RACSequence *stream = [array rac_sequence];
-    NSLog(@"%@", [[[array rac_sequence] map:^id(id value) {
-        return @(pow([value integerValue], 2));
+
+//    NSLog(@"%@", [[[array rac_sequence] map:^id(id value) {
+//        return @(pow([value integerValue], 2));
+//    }] array]);
+    
+    NSLog(@"%@", [[[array rac_sequence] filter:^BOOL(id value) {
+        return [value integerValue] % 2 == 0;
     }] array]);
     
     return YES;
