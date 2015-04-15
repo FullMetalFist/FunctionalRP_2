@@ -10,8 +10,6 @@
 
 #import "RootSampleViewController.h"
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
-
 @interface AppDelegate ()
 
 @property (nonatomic) RootSampleViewController *rootViewController;
@@ -28,23 +26,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = self.rootViewController;
     [self.window makeKeyAndVisible];
-    
-    // rac_sequence
-    NSArray *array = @[@1, @2, @3];
-
-//    NSLog(@"%@", [[[array rac_sequence] map:^id(id value) {
-//        return @(pow([value integerValue], 2));
-//    }] array]);
-    
-//    NSLog(@"%@", [[[array rac_sequence] filter:^BOOL(id value) {
-//        return [value integerValue] % 2 == 0;
-//    }] array]);
-    
-    NSLog(@"%@", [[[array rac_sequence] map:^id(id value) {
-        return [value stringValue];
-    }] foldLeftWithStart:@"" reduce:^id(id accumulator, id value) {
-        return [accumulator stringByAppendingString:value];
-    }]);
     
     return YES;
 }
