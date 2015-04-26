@@ -31,7 +31,8 @@
 
 - (void) createTextField
 {
-    CGRect textFieldFrame = CGRectMake(10, 10, 200, 50);
+    // redefined 20,200,200,20 container
+    CGRect textFieldFrame = CGRectMake(20, 200, 200, 20);
     self.textField = [[UITextField alloc] initWithFrame:textFieldFrame];
     self.textField.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:self.textField];
