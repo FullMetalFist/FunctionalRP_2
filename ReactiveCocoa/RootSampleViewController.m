@@ -23,12 +23,9 @@
     // Do any additional setup after loading the view.
     [self createTextField];
     
+    // shorter, suggested version
     [self.textField.rac_textSignal subscribeNext:^(id x) {
         NSLog(@"New Value: %@", x);
-    } error:^(NSError *error) {
-        NSLog(@"Error: %@", error);
-    } completed:^{
-        NSLog(@"Completed");
     }];
 }
 
