@@ -13,6 +13,7 @@
 @interface RootSampleViewController ()
 
 @property (nonatomic) UITextField *textField;
+@property (nonatomic) UIButton *button;
 
 @end
 
@@ -22,10 +23,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createTextField];
+    [self createButton];
     
-    // shorter, suggested version
-    [self.textField.rac_textSignal subscribeNext:^(id x) {
-        NSLog(@"New Value: %@", x);
+//    // shorter, suggested version
+//    [self.textField.rac_textSignal subscribeNext:^(id x) {
+//        NSLog(@"New Value: %@", x);
+//    }];
+    RACSignal *validEmailSignal = [self.textField.rac_textSignal map:^id(NSString *value) {
+        return @([value rangeOfString:@"@"].location != NSNotFound);
+    }];
+    RAC(self.button, enabled) = validEmailSignal;
+    RAC(self.textField, textColor) = [validEmailSignal map:^id(id value) {
+        if ([value boolValue]) {
+            return [UIColor greenColor];
+        }
+        else {
+            return [UIColor redColor];
+        }
     }];
 }
 
@@ -36,6 +50,20 @@
     self.textField = [[UITextField alloc] initWithFrame:textFieldFrame];
     self.textField.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:self.textField];
+}
+
+- (void) createButton
+{
+    // button configuration
+    CGRect buttonFrame = CGRectMake(110.0f,
+                                    240.0f,
+                                    100.0f,
+                                    44.0f);
+    self.button = [[UIButton alloc] initWithFrame:buttonFrame];
+    [self.button setTitle:@"Okay" forState:UIControlStateNormal];
+    [self.button setTitle:@"OKAY" forState:UIControlStateHighlighted];
+    self.button.backgroundColor = [UIColor darkGrayColor];
+    [self.view addSubview:self.button];
 }
 
 @end
