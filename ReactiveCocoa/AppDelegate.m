@@ -9,10 +9,12 @@
 #import "AppDelegate.h"
 
 #import "RootSampleViewController.h"
+#import "FRPGalleryViewController.h"
 
 @interface AppDelegate ()
 
-@property (nonatomic) RootSampleViewController *rootViewController;
+@property (nonatomic) UINavigationController *navController;
+@property (nonatomic) FRPGalleryViewController *galleryViewController;
 
 @end
 
@@ -22,9 +24,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.rootViewController = [[RootSampleViewController alloc] initWithNibName:nil bundle:nil];
+    self.galleryViewController = [[FRPGalleryViewController alloc] initWithNibName:nil bundle:nil];
+    self.navController = [[UINavigationController alloc] initWithRootViewController:self.galleryViewController];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = self.rootViewController;
+    self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
     
     return YES;
