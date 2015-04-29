@@ -32,6 +32,8 @@
     self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
     
+    self.apiHelper = [[PXAPIHelper alloc] initWithHost:nil consumerKey:@"aREaY0lpaF5W53N25x9mqefgSLhALFwtSoHMnFpA" consumerSecret:@"P61nsPv1DhUI81GseysqhTW6jqU3JX7H5XI6vgfl"];
+    
     return YES;
 }
 

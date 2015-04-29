@@ -4,7 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-500px-iOS-api.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-libextobjc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9C6044C5D6E41230FC3B2C82</key>
+		<key>49FA1A606F16E8561E446E26</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC244E27ACA1C33DD812614C</key>
+		<key>67A747DB378232663AB3E36D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FB66E5A821E6ADF0E7A125E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9FF8E0E6D510CFCC18893AD9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD99623BA68606A41E1BA398</key>
 		<dict>
 			<key>primary</key>
 			<true/>

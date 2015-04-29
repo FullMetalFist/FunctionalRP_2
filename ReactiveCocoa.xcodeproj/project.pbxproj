@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7C48AA091AEF971200BCE3E7 /* FRPGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48AA081AEF971200BCE3E7 /* FRPGalleryViewController.m */; };
 		7C48AA0C1AEF97D000BCE3E7 /* FRPGalleryFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48AA0B1AEF97D000BCE3E7 /* FRPGalleryFlowLayout.m */; };
+		7C8B33BB1AF145590029288B /* FRPPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8B33BA1AF145590029288B /* FRPPhotoModel.m */; };
+		7C8B33BE1AF146130029288B /* FRPPhotoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8B33BD1AF146130029288B /* FRPPhotoImporter.m */; };
 		7C8F90391AD6168C00BD3724 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8F90381AD6168C00BD3724 /* main.m */; };
 		7C8F903C1AD6168C00BD3724 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8F903B1AD6168C00BD3724 /* AppDelegate.m */; };
 		7C8F90441AD6168C00BD3724 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C8F90431AD6168C00BD3724 /* Images.xcassets */; };
@@ -32,6 +34,11 @@
 		7C48AA081AEF971200BCE3E7 /* FRPGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPGalleryViewController.m; sourceTree = "<group>"; };
 		7C48AA0A1AEF97D000BCE3E7 /* FRPGalleryFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPGalleryFlowLayout.h; sourceTree = "<group>"; };
 		7C48AA0B1AEF97D000BCE3E7 /* FRPGalleryFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPGalleryFlowLayout.m; sourceTree = "<group>"; };
+		7C8B33B81AF141050029288B /* ReactiveCocoa-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactiveCocoa-Prefix.pch"; sourceTree = "<group>"; };
+		7C8B33B91AF145590029288B /* FRPPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPPhotoModel.h; sourceTree = "<group>"; };
+		7C8B33BA1AF145590029288B /* FRPPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoModel.m; sourceTree = "<group>"; };
+		7C8B33BC1AF146130029288B /* FRPPhotoImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPPhotoImporter.h; sourceTree = "<group>"; };
+		7C8B33BD1AF146130029288B /* FRPPhotoImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoImporter.m; sourceTree = "<group>"; };
 		7C8F90331AD6168C00BD3724 /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8F90371AD6168C00BD3724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C8F90381AD6168C00BD3724 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,6 +106,10 @@
 			children = (
 				7C8F903A1AD6168C00BD3724 /* AppDelegate.h */,
 				7C8F903B1AD6168C00BD3724 /* AppDelegate.m */,
+				7C8B33B91AF145590029288B /* FRPPhotoModel.h */,
+				7C8B33BA1AF145590029288B /* FRPPhotoModel.m */,
+				7C8B33BC1AF146130029288B /* FRPPhotoImporter.h */,
+				7C8B33BD1AF146130029288B /* FRPPhotoImporter.m */,
 				7C48AA071AEF971200BCE3E7 /* FRPGalleryViewController.h */,
 				7C48AA081AEF971200BCE3E7 /* FRPGalleryViewController.m */,
 				7C48AA0A1AEF97D000BCE3E7 /* FRPGalleryFlowLayout.h */,
@@ -115,6 +126,7 @@
 			children = (
 				7C8F90371AD6168C00BD3724 /* Info.plist */,
 				7C8F90381AD6168C00BD3724 /* main.m */,
+				7C8B33B81AF141050029288B /* ReactiveCocoa-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -191,6 +203,7 @@
 		7C8F902B1AD6168B00BD3724 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FRP;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Giving Tree";
 				TargetAttributes = {
@@ -279,8 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C8B33BB1AF145590029288B /* FRPPhotoModel.m in Sources */,
 				7C48AA091AEF971200BCE3E7 /* FRPGalleryViewController.m in Sources */,
 				7C48AA0C1AEF97D000BCE3E7 /* FRPGalleryFlowLayout.m in Sources */,
+				7C8B33BE1AF146130029288B /* FRPPhotoImporter.m in Sources */,
 				7C8F903C1AD6168C00BD3724 /* AppDelegate.m in Sources */,
 				7C8F90391AD6168C00BD3724 /* main.m in Sources */,
 			);
