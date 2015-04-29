@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7C48AA091AEF971200BCE3E7 /* FRPGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48AA081AEF971200BCE3E7 /* FRPGalleryViewController.m */; };
 		7C48AA0C1AEF97D000BCE3E7 /* FRPGalleryFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C48AA0B1AEF97D000BCE3E7 /* FRPGalleryFlowLayout.m */; };
-		7C814F371ADB4BE600D46FC6 /* RootSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C814F361ADB4BE600D46FC6 /* RootSampleViewController.m */; };
 		7C8F90391AD6168C00BD3724 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8F90381AD6168C00BD3724 /* main.m */; };
 		7C8F903C1AD6168C00BD3724 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8F903B1AD6168C00BD3724 /* AppDelegate.m */; };
 		7C8F90441AD6168C00BD3724 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C8F90431AD6168C00BD3724 /* Images.xcassets */; };
@@ -33,8 +32,6 @@
 		7C48AA081AEF971200BCE3E7 /* FRPGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPGalleryViewController.m; sourceTree = "<group>"; };
 		7C48AA0A1AEF97D000BCE3E7 /* FRPGalleryFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPGalleryFlowLayout.h; sourceTree = "<group>"; };
 		7C48AA0B1AEF97D000BCE3E7 /* FRPGalleryFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPGalleryFlowLayout.m; sourceTree = "<group>"; };
-		7C814F351ADB4BE600D46FC6 /* RootSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootSampleViewController.h; sourceTree = "<group>"; };
-		7C814F361ADB4BE600D46FC6 /* RootSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootSampleViewController.m; sourceTree = "<group>"; };
 		7C8F90331AD6168C00BD3724 /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8F90371AD6168C00BD3724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C8F90381AD6168C00BD3724 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,8 +103,6 @@
 				7C48AA081AEF971200BCE3E7 /* FRPGalleryViewController.m */,
 				7C48AA0A1AEF97D000BCE3E7 /* FRPGalleryFlowLayout.h */,
 				7C48AA0B1AEF97D000BCE3E7 /* FRPGalleryFlowLayout.m */,
-				7C814F351ADB4BE600D46FC6 /* RootSampleViewController.h */,
-				7C814F361ADB4BE600D46FC6 /* RootSampleViewController.m */,
 				7C8F90431AD6168C00BD3724 /* Images.xcassets */,
 				7C8F90451AD6168C00BD3724 /* LaunchScreen.xib */,
 				7C8F90361AD6168C00BD3724 /* Supporting Files */,
@@ -287,7 +282,6 @@
 				7C48AA091AEF971200BCE3E7 /* FRPGalleryViewController.m in Sources */,
 				7C48AA0C1AEF97D000BCE3E7 /* FRPGalleryFlowLayout.m in Sources */,
 				7C8F903C1AD6168C00BD3724 /* AppDelegate.m in Sources */,
-				7C814F371ADB4BE600D46FC6 /* RootSampleViewController.m in Sources */,
 				7C8F90391AD6168C00BD3724 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

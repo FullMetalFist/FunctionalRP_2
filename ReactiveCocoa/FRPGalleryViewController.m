@@ -20,13 +20,15 @@ static NSString * const reuseIdentifier = @"Cell";
 - (instancetype) init
 {
     FRPGalleryFlowLayout *flowLayout = [[FRPGalleryFlowLayout alloc] init];
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
-    [self.collectionView registerClass:[UICollectionView class] forCellWithReuseIdentifier:@"cell"];
+    
     self = [self initWithCollectionViewLayout:flowLayout];
+    // Register cell classes
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     if (!self) {
         return nil;
     }
+    
     return self;
 }
 
@@ -36,8 +38,8 @@ static NSString * const reuseIdentifier = @"Cell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+//    // Register cell classes
+//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
