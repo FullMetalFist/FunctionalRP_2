@@ -16,47 +16,9 @@
 {
     RACReplaySubject *subject = [RACReplaySubject subject];
     
-//    NSURLRequest *request = [self popularURLRequest];
-//    
-//    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-//        if (data) {
-//            id results = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-//            [subject sendNext:[[[results[@"photos"] rac_sequence] map:^id(NSDictionary *photoDictionary) {
-//                FRPPhotoModel *model = [FRPPhotoModel new];
-//                [self configurePhotoModel:model withDictionary:photoDictionary];
-//                [self downloadThumbnailForPhotoModel:model];
-//                return model;
-//            }] array]];
-//            [subject sendCompleted];
-//            
-//        }
-//        else {
-//            [subject sendError:connectionError];
-//        }
-//    }];
     
     return subject;
 }
-
-//+ (NSURLRequest *) popularURLRequest
-//{
-//    return [AppDelegate.apiHelper urlRequestForPhotoFeature:[PXAPIHelperPhotoFeaturePopular resultsPerPage:100 page:0 photoSizes:PXPhotoSizeThumbnail sortOrder:PXAPIHelperSortOrderRating except:PXPhotoModelCategoryNude]];
-//}
-
-//+ (void) configurePhotoModel:(FRPPhotoModel *)photoModel withDictionary:(NSDictionary *)dictionary
-//{
-//    // basics details fetched with the first, basic request
-//    photoModel.photoName = dictionary[@"name"];
-//    photoModel.identifier = dictionary[@"id"];
-//    photoModel.photographerName = dictionary[@"user"][@"username"];
-//    photoModel.rating = dictionary[@"rating"];
-//    photoModel.thumbnailURL = [self urlForImageSize:3 inArray:dictionary[@"images"]];
-//    
-//    // extended attributes fetched with subsequent request
-//    if (dictionary[@"comments_count"]) {
-//        photoModel.fullSizedURL = [self urlForImageSize:4 inArray:dictionary[@"images"]];
-//    }
-//}
 
 + (NSString *)urlForImageSize:(NSInteger)size inDictionary:(NSArray *)array
 {
